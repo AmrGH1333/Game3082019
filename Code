@@ -1,0 +1,41 @@
+import random
+Player_Score=0
+Comp_Score=0
+while True :
+    Player = int(input("Your Turn: (1) for Rock & (2) for Paper & (3) for scissors : "))
+    Comp = random.randint(1,3)
+    if Player == 1 and Comp == 1 :
+        print('Draw')
+    elif Player==1 and Comp==3 :
+        Player_Score+=1
+        print("Winner")
+        print("Player Score : {}, Comp Score : {} ".format(Player_Score,Comp_Score))
+    elif Player==1and Comp==2 :
+        Comp_Score+=1
+        print("Try Again")
+        print("Player Score : {}, Comp Score : {} ".format(Player_Score,Comp_Score))
+    elif Player==3and Comp==3 :
+        print('Draw!')
+    elif Player==3 and Comp==2 :
+        Player_Score+=1
+        print("Winner")
+        print("Player Score : {}, Comp Score : {} ".format(Player_Score,Comp_Score))
+    elif Player==3 and Comp==1 :
+        Comp_Score+=1
+        print("Try Again")
+        print("Player Score : {}, Comp Score : {} ".format(Player_Score,Comp_Score))
+    elif Player==2 and Comp==2 :
+                print('Draw!')
+    elif Player==2 and Comp==3 :
+        Comp_Score+=1
+        print("Try Again")
+        print("Player Score : {}, Comp Score : {} ".format(Player_Score,Comp_Score))
+    elif Player==2 and Comp==1 :
+        Player_Score+=1
+        print("Winner")
+        print("Player Score : {}, Comp Score : {} ".format(Player_Score,Comp_Score))
+    Ask_for_more = int(input("Do you want to continue (Yes = 1 Or No = 0) "))
+    if Ask_for_more==0:
+        break 
+    else : 
+        continue
